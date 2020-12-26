@@ -1,0 +1,20 @@
+{
+  "dockerComposeFile": ["../docker-compose.yml", "docker-compose.override.yml"],
+  "service": "rustlang-dev-wksp",
+  "workspaceFolder": "/workspace",
+  "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "lldb.executable": "/usr/bin/lldb",
+    "files.watcherExclude": {
+      "**/target/**": true
+    }
+  },
+  "extensions": [
+    "rust-lang.rust",
+    "bungcip.better-toml",
+    "vadimcn.vscode-lldb",
+    "mutantdino.resourcemonitor"
+  ],
+  "postCreateCommand": "rustc --version"
+}

@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  rustlang-dev-wksp:
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes:
+      - .:/workspace:z
+    working_dir: /workspace

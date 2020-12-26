@@ -1,0 +1,4 @@
+version: "3.7"
+services:
+  rustlang-dev-wksp:
+    command: sleep infinity
